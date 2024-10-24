@@ -19,7 +19,7 @@ Before you begin, ensure you have the following installed on your system:
 
 ## Getting Started
 
-#### Find Server Here: [https://github.com/Ingy10/Instock-Warehouse-Inventory-App-Server]
+#### Find Server Here: [https://github.com/Ingy10/Instock-Server]
 
 ### 1. Clone the Repository
 
