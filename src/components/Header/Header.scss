@@ -61,14 +61,15 @@
   &__buttons {
     @include button-base;
     @include mobile-labels-links-buttons;
-    color: $cloud;
-    background-color: $graphite;
-    border: none;
-    width: 10.25rem;
-
+    & {
+      color: $cloud;
+      background-color: $graphite;
+      border: none;
+      width: 10.25rem;
+    }
 
     @include tablet-breakpoint {
-      @include labels-links-buttons
+      @include labels-links-buttons;
     }
 
     &--active {

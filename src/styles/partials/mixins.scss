@@ -26,8 +26,10 @@
 }
 
 @mixin mobile-labels-links-buttons {
-  font-size: 0.8125rem;
-  line-height: 1.25rem;
+  & {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
 }
 
 @mixin mobile-table-header {
@@ -88,14 +90,20 @@
 
 //button styling=============================================================
 @mixin button-base {
-  @include mobile-labels-links-buttons;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  border-radius: 2rem;
+  & {
+    @include mobile-labels-links-buttons;
+    & {
+      padding: 0.5rem 1rem;
+      width: 100%;
+      border-radius: 2rem;
+    }
+  }
+
   @include tablet-breakpoint {
     @include labels-links-buttons;
     width: auto;
   }
+
   &:hover {
     transition: 0.3s;
     cursor: pointer;
@@ -103,10 +111,13 @@
 }
 
 @mixin button-primary {
-  color: $white;
-  background-color: $instock-indigo;
-  border: 1px solid $instock-indigo;
   @include button-base;
+
+  & {
+    color: $white;
+    background-color: $instock-indigo;
+    border: 1px solid $instock-indigo;
+  }
   &:hover {
     background-color: $graphite;
     border-color: $graphite;
@@ -114,10 +125,14 @@
 }
 
 @mixin button-secondary {
-  color: $slate;
-  background-color: $white;
-  border: 1px solid $cloud;
   @include button-base;
+
+  & {
+    color: $slate;
+    background-color: $white;
+    border: 1px solid $cloud;
+  }
+
   &:hover {
     color: $instock-indigo;
     background-color: $white;
@@ -126,10 +141,14 @@
 }
 
 @mixin button-delete {
-  color: $white;
-  background-color: $red;
-  border: 1px solid $red;
   @include button-base;
+
+  & {
+    color: $white;
+    background-color: $red;
+    border: 1px solid $red;
+  }
+
   &:hover {
     background-color: $graphite;
     border-color: $graphite;
@@ -137,17 +156,21 @@
 }
 
 @mixin button-instock {
-  color: rgb(16, 149, 78);
-  background-color: rgba(21, 132, 99, 0.07);
-  &:hover{ 
+  & {
+    color: rgb(16, 149, 78);
+    background-color: rgba(21, 132, 99, 0.07);
+  }
+  &:hover {
     cursor: auto;
   }
 }
 
 @mixin button-outofstock {
-  color: rgb(183, 52, 35);
-  background-color: rgba(201, 69, 21, 0.07);
-  &:hover{ 
+  & {
+    color: rgb(183, 52, 35);
+    background-color: rgba(201, 69, 21, 0.07);
+  }
+  &:hover {
     cursor: auto;
   }
 }
